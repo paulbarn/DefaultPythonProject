@@ -19,7 +19,7 @@ Install:
 	Maker sure to install in your User\AppData\Local\Programs\Python, NOT C:\ProgramFiles!
 	Add Python path to your user Path Variable
 		Path: Add C:\Users\pbarnett\AppData\Local\Programs\Python\Python310\Scripts - First line
-		Path: Add C:\Users\pbarnett\AppData\Local\Programs\Python\Python310					- Second line
+		Path: Add C:\Users\pbarnett\AppData\Local\Programs\Python\Python310			- Second line
 
 
 Virtual Environments:
@@ -54,7 +54,7 @@ Use pip (which is pip3 when on Python 3)
 		pip unistall pypdf2
 		
 GIT:
-Create a git repo in a directory in the current directory
+Clone a GITHUB Repository to Local Directory:
 	Open a CMD Window by typing run cmd in the Windows "Type here to seach" 
 	Navigate to the base directory, a new directory will be created - so don't make one here
 		cd Drag the file path from the File Explorer into the CMD window
@@ -63,6 +63,30 @@ Create a git repo in a directory in the current directory
 	Right click on the new directory and select 'Open with Code'
 	Open a terminal
 	At this point you have a working copy of the repository and no GIT commands are required to run it
+
+Make a GITHUB Repo from Local Directory:
+1. Clone someone's repo on Github & copy local existing files into it, add files to it
+		Web browser to github.com
+		Login (or register an account)
+		Copy the code link: https://github.com/paulbarn/DefaultPythonProject.git
+		Create a Local folder
+		Open a CMD Window
+		git clone https://github.com/paulbarn/DefaultPythonProject.git .
+		 or
+		git clone https://github.com/paulbarn/DefaultPythonProject.git NewProject
+		git remote -v
+		git remote remove origin
+		Now you simply have a copy of the repo on you local machine and are not tied to the source repo
+		  because you odn't want to sync this with the source, likely you don't have permission anyway
+		Copy files into this directory or start making files
+		git add --all
+		git commit -m "initial commit'
+		To create your own repo on Github and push this code to it see the next section
+		
+2. Make Local repo & push to your Github
+		TBD
+
+
 Commands:
 	git status
 	git add --all
@@ -109,6 +133,7 @@ Build for Distribution:
 		Use a web app/service to convert to 16x16 icon file and download the .ico file
 		Example: https://image.online-convert.com/convert-to-ico
 	
+    
 readme.md
 This file is in markdown language which is a lightweight HTML type of text file
 It allows for formatting instructions with the text
