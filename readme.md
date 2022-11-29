@@ -1,7 +1,6 @@
-# PDF Parser TkApp
+# Python Default Project
 
-## A graphical user interface to parse text from pdf files using regular expressions.
-## Output can be saved as csv file.
+## A collection of files for developing Python Projects on windows
 
 *  v1.0 Initial Release
 
