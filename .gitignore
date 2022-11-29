@@ -1,0 +1,6 @@
+venv/
+setup/
+old_code/
+build/
+app/setup.txt
+*.csv

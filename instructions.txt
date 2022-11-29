@@ -1,0 +1,116 @@
+Python Application Development Guide
+P. Barnett
+November 2022
+
+VS Code:
+Install VS Code (Visual Studio Code) - Not Visual Studio!
+
+
+Python:
+Install Python from www.python.org
+Version:
+  32 bit - More compatible for many users, ODBC drivers for Aspen are default 32bit
+	64 bit - Only issue is that you will need 64 bit ODBC drivers whcih are on ODC File Server
+	3.10.x - Good Choice, don't install the absolute latest version due to packages not all available yet
+	Anaconda - Also a good choice but virtual environment is different
+	
+	
+Install:
+	Maker sure to install in your User\AppData\Local\Programs\Python, NOT C:\ProgramFiles!
+	Add Python path to your user Path Variable
+		Path: Add C:\Users\pbarnett\AppData\Local\Programs\Python\Python310\Scripts - First line
+		Path: Add C:\Users\pbarnett\AppData\Local\Programs\Python\Python310					- Second line
+
+
+Virtual Environments:
+VENV Package:
+	This is included in the base Python install
+		REM Make the venv & activate it
+		python -m venv venv
+		venv\scripts\activate
+	Activate:   venv\scripts\activate.bat
+	Deactivate: venv\scripts\deactivate.bat
+
+
+Managing Packages:
+Use pip (which is pip3 when on Python 3)
+		# list packages
+		pip list
+		
+		# update pip
+		python -m pip install --upgrade pip
+		
+		# install packages
+		pip install wheel
+		pip install pypdf2 pandas numpy cx-freeze
+		
+		# create requirements.txt
+		pip freeze > requirements.txt
+				
+		# install from requirements.txt
+		pip install -r requirements.txt
+		
+		# uninstall packages
+		pip unistall pypdf2
+		
+GIT:
+Create a git repo in a directory in the current directory
+	Open a CMD Window by typing run cmd in the Windows "Type here to seach" 
+	Navigate to the base directory, a new directory will be created - so don't make one here
+		cd Drag the file path from the File Explorer into the CMD window
+		git clone https://github.com/paulbarn/PdfParser.git
+		Close the CMD window
+	Right click on the new directory and select 'Open with Code'
+	Open a terminal
+	At this point you have a working copy of the repository and no GIT commands are required to run it
+Commands:
+	git status
+	git add --all
+	git commit -m "message"
+
+	git log --all --decorate --oneline --graph
+	git log --all --decorate --oneline --graph -n 20
+
+	git branch --list
+	git branch name
+	git branch -d name
+	git branch -D name
+	git branch -m name
+	git branch -a
+	git checkout branchname
+	
+	git fetch
+	git pull
+	git push
+
+	git remote
+	git remote -v
+	git remote remove origin	
+	
+.gitignore File:
+	venv/						# direcotries
+	setup/
+	old_code/
+	build/
+	app/setup.txt		# files
+	*.csv						# pattern files
+
+
+Publish:
+Build for Distribution:
+	Use pip install cx-freeze
+	python setup.py build
+	setup.py file contains the exe build instructions
+	Output folder is build\...
+	app.ico is an icon file - a 16x16 color bitmap image
+		To make one use Word, import an image or symbol
+		Make changes as desired
+		Right click on image, click save as --> .png (usually 96x96)
+		Use a web app/service to convert to 16x16 icon file and download the .ico file
+		Example: https://image.online-convert.com/convert-to-ico
+	
+readme.md
+This file is in markdown language which is a lightweight HTML type of text file
+It allows for formatting instructions with the text
+Git uses these mostly but 
+VS Code can show them with the CTRL-SHIFT-v (right click, open preview)
