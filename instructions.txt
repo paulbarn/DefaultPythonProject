@@ -73,6 +73,7 @@ Setup:
         git config --global user.name "Mona Lisa"
         git config --global user.email "YOUR_EMAIL"
     Confirm
+        git config --global --list, or
         git config --global user.name
         git config --global user.email
     
