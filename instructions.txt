@@ -62,7 +62,8 @@ Use pip (which is pip3 when on Python 3)
 Setup:
     Your git config info is stored in a file called .gitconfig
     Located usually in C:\Users\username\.gitconfig
-    
+    Git still makes master the main branch -> set Git global default to main branch
+    Guthub is using main as the main branch
     Public vs Private Emails
         If you email is Private go to your Github account settings & click Emails
         Determine you Primary email address which is likely
@@ -72,6 +73,7 @@ Setup:
     Configure your email and username for every repo
         git config --global user.name "Mona Lisa"
         git config --global user.email "YOUR_EMAIL"
+        git config --global init.defaultBranch main
     Confirm
         git config --global --list, or
         git config --global user.name
