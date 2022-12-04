@@ -95,7 +95,14 @@ Make a Local Git Repo
     Add files and commit them
     Make branches and merge them in
     There is no link to Gihub - the files are local only, no remote
-
+    To link to Github remote:
+    	make a new reop on Github with proper permissions (private/public, contributors?)
+	copy the URL fom Github
+	git remote add origin URL, where URL = https://github.com/paulbarn/network-ping.git
+	git push -u origin main, now local/main tracks remote/main, do this for each branch you want to push to remote
+    To create Github remote from Command Line:
+    	use Github CLI to create the repo on Github from the command line but you have to install it from https://github.com/cli/cli
+	
 Clone a Github Repository to Local Directory:
     Three options:
         Zip     - just down load the zip file & extract, no git repo going on
@@ -118,9 +125,9 @@ Clone a Github Repository to Local Directory:
         Navigate to your Python Project directory, a new directory will be created - so don't make one here
         type cd then drag the file path from the File Explorer into the CMD window
         Clone the Github repo
-            type git clone https://github.com/paulbarn/DefaultPythonProject.git name
-            name is the name of the directory to be created for the repo
-            good convention to make it similar to the repo name so you remember which repo it is
+            type git clone https://github.com/paulbarn/DefaultPythonProject.git (to make a new dir with same name as repo)
+	    type git clone https://github.com/paulbarn/DefaultPythonProject.git name (to make a new dir with named name)
+            	good convention to make it similar to the repo name so you remember which repo it is
         Close the CMD window
         Right click on the new directory and select 'Open with Code'
         Open a terminal in VS Code by typing CTRL~
@@ -145,6 +152,7 @@ Commands:
     git log --all --decorate --oneline --graph
     git log --all --decorate --oneline --graph -n 20
 
+    git branch -vv
     git branch --list
     git branch name
     git branch -d name
@@ -155,7 +163,11 @@ Commands:
 	
     git fetch
     git pull
-    git push    
+    git push
+    
+    git remote add origin URL, where URL = https://github.com/paulbarn/network-ping.git
+    git push -u origin main
+    git push -u origin dev
 
     git remote
     git remote -v
