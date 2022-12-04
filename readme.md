@@ -17,8 +17,8 @@ Option to Add New Remote:
 	git push -u origin main
 	
 ### 2. Create a Github Repo from the command line
-	### Use Github CLI from here https://github.com/cli/cli
-	### Follow the Readme intstructions
+	Use Github CLI from here https://github.com/cli/cli
+	Follow the Readme intstructions
 
 <!-- markdownlint-disable-file required-headings -->
 	
