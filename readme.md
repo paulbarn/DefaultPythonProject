@@ -4,10 +4,10 @@
 
 *  v1.0 Initial Release
 
-### Make a new directory, name it your project name
-### cd into that directory
-### git clone https://github.com/paulbarn/DefaultPythonProject.git .
-### git remote remove origin
+### 1. Make a new directory, name it your project name
+### 2. cd into that directory
+### 3. git clone https://github.com/paulbarn/DefaultPythonProject.git .
+### 4. git remote remove origin
 
 ***Now your directory is free from any remote repositories***
 
